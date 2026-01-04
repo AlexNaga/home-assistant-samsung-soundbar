@@ -138,6 +138,10 @@ class SoundbarLocalEntity(CoordinatorEntity, MediaPlayerEntity):
     def sound_mode(self):
         return self.coordinator.data.get("sound_mode")
 
+    @property
+    def extra_state_attributes(self):
+        return {"volume_level": self.volume_level}
+
     # ---------- coordinator update ----------
     @callback
     def _handle_coordinator_update(self) -> None:

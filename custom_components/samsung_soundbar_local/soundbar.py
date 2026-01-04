@@ -1,7 +1,7 @@
 """
 Asynchronous client for Samsung soundbar.
 
-Should work on HW-Q990D, HW-Q930D, HW-Q800D, HW-QS730D, HW-S800D, HW-S801D, HW-S700D, HW-S60D, HW-S61D, HW-LS60D
+Should work on HW-Q995D, HW-Q990D, HW-Q930D, HW-Q800D, HW-QS730D, HW-S800D, HW-S801D, HW-S700D, HW-S60D, HW-S61D, HW-LS60D
 """
 
 from __future__ import annotations
