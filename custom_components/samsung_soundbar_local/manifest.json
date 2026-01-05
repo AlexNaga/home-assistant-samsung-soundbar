@@ -5,6 +5,7 @@
   "config_flow": true,
   "iot_class": "local_polling",
   "requirements": ["aiohttp>=3.8"],
-  "codeowners": ["@ZtF"],
-  "documentation": "https://github.com/ZtF/hass-samsung-soundbar-local"
+  "codeowners": ["@ZtF", "@AlexNaga"],
+  "documentation": "https://github.com/AlexNaga/home-assistant-samsung-soundbar",
+  "issue_tracker": "https://github.com/AlexNaga/home-assistant-samsung-soundbar/issues"
 }
