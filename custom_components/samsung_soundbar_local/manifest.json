@@ -1,11 +1,11 @@
 {
   "domain": "samsung_soundbar_local",
   "name": "Samsung Soundbar Local",
-  "version": "1.0",
-  "config_flow": true,
-  "iot_class": "local_polling",
-  "requirements": ["aiohttp>=3.8"],
   "codeowners": ["@ZtF", "@AlexNaga"],
+  "config_flow": true,
   "documentation": "https://github.com/AlexNaga/home-assistant-samsung-soundbar",
-  "issue_tracker": "https://github.com/AlexNaga/home-assistant-samsung-soundbar/issues"
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/AlexNaga/home-assistant-samsung-soundbar/issues",
+  "requirements": ["aiohttp>=3.8"],
+  "version": "1.0"
 }
