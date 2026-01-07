@@ -36,12 +36,12 @@ jobs:
 
       - name: "Get version"
         id: version
-        run: echo "version=$(jq -r .version custom_components/soundbar_local/manifest.json)" >> $GITHUB_OUTPUT
+        run: echo "version=$(jq -r .version custom_components/samsung_soundbar_local/manifest.json)" >> $GITHUB_OUTPUT
 
       - name: "ZIP integration"
         run: |
-          cd custom_components/soundbar_local
-          zip -r ../../soundbar_local.zip .
+          cd custom_components/samsung_soundbar_local
+          zip -r ../../samsung_soundbar_local.zip .
 
       - name: "Create release"
         uses: "softprops/action-gh-release@v2"
@@ -49,4 +49,4 @@ jobs:
           tag_name: "v${{ steps.version.outputs.version }}"
           name: "v${{ steps.version.outputs.version }}"
           generate_release_notes: true
-          files: soundbar_local.zip
+          files: samsung_soundbar_local.zip

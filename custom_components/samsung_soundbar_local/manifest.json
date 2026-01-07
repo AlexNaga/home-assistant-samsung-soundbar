@@ -1,5 +1,5 @@
 {
-  "domain": "soundbar_local",
+  "domain": "samsung_soundbar_local",
   "name": "Samsung Soundbar Local",
   "codeowners": ["@ZtF", "@AlexNaga"],
   "config_flow": true,
@@ -7,5 +7,5 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/AlexNaga/home-assistant-samsung-soundbar/issues",
   "requirements": ["aiohttp>=3.8"],
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
