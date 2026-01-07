@@ -1,5 +1,5 @@
 {
-  "domain": "samsung_soundbar_local",
+  "domain": "soundbar_local",
   "name": "Samsung Soundbar Local",
   "codeowners": ["@ZtF", "@AlexNaga"],
   "config_flow": true,
