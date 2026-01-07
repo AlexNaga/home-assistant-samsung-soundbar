@@ -1,0 +1,48 @@
+name: "Auto Release"
+
+on:
+  push:
+    branches:
+      - "main"
+
+permissions: {}
+
+jobs:
+  validate:
+    name: "Validate"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Hassfest"
+        uses: "home-assistant/actions/hassfest@master"
+
+      - name: "HACS"
+        uses: "hacs/action@main"
+        with:
+          category: "integration"
+          ignore: "brands"
+
+  release:
+    name: "Release"
+    needs: validate
+    runs-on: "ubuntu-latest"
+    permissions:
+      contents: write
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Get version"
+        id: version
+        run: echo "version=$(jq -r .version custom_components/soundbar_local/manifest.json)" >> $GITHUB_OUTPUT
+
+      - name: "Create release"
+        uses: "softprops/action-gh-release@v2"
+        with:
+          tag_name: "v${{ steps.version.outputs.version }}"
+          name: "v${{ steps.version.outputs.version }}"
+          generate_release_notes: true
+          files: |
+            custom_components/soundbar_local/**
