@@ -26,6 +26,7 @@ jobs:
 
   release:
     name: "Release"
+    needs: validate
     runs-on: "ubuntu-latest"
     permissions:
       contents: write
